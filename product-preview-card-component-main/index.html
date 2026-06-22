@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+    *{
+      padding:0;
+      margin:0;
+      box-sizing:border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      flex-direction: column;
+      background-color: hsl(30, 38%, 92%) ;
+
+    }
+
+    .container {
+      overflow:inherit;
+      background-color: hsl(0, 0%, 100%);
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      /* border: 2px solid black; */
+      width: 40vw;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .container img {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+
+    .item1 {
+      width: 50%;
+    }
+
+    .item2 {
+      width: 50%;
+      /* border:2px solid red; */
+      padding: 15px;
+    }
+    .font1{
+      font-family: "Montserrat";
+      color:hsl(228, 12%, 48%);
+
+    }
+    .font2{
+      font-family: "Fraunces";
+    }
+    .btn{
+      width:100%;
+      height:9.5vh;
+      border-radius: 10px;
+      border-width: 0;
+      background-color: hsl(158, 36%, 37%);
+      color:white;
+      font-family:"Montserrat" ;
+      align-self:baseline;
+      margin-bottom: 2px;
+    }
+    .btn:hover{
+      background-color: hsl(158, 42%, 18%);
+    }
+    p.font1{
+      font-size: small;
+      margin-bottom:20;
+    }
+    p.font2{
+      display:flex;
+    }
+    div.font1{
+      margin:0;
+      font-size: small;
+    }
+    h1.font2{
+      margin-top:20px;
+      margin-bottom:20px;
+    }
+    span{
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+    span.mainprice{
+      color:hsl(158, 36%, 37%);
+      font-weight: 700;
+      font-size: 30px;
+      margin-right: 5%;
+    }
+    span.cutprice{
+      color:hsl(228, 12%, 48%);
+      text-decoration: line-through ;
+      font-size: smaller;
+    }
+    @media (max-width: 750px){
+      .container{
+        display:flex;
+        flex-direction: column;
+        width:90%;
+        height:auto;
+        overflow:inherit;
+        margin-top:200px;
+      }
+      .item1{
+        width:100%;
+        height:240px;
+      }
+      .item2{
+        width:100%;
+      }
+      .container img{
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item1">
+      <picture>
+        <source meia="(max-width:800px)" src="images/image-product-mobile.jpg">
+      <img src="images/image-product-desktop.jpg" alt="" class="image">
+      </picture>
+    </div>
+    <div class="item2">
+     <div class="font1">PERFUME</div> 
+
+      <h1 class="font2">Gabrielle Essence Eau De Parfum</h1>
+
+      <p class="font1">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+      Perfumer-Creator for the House of CHANEL.</p>
+
+      <p class="font2"><span class="mainprice">$149.99</span> <span class="cutprice">$169.99</span></span></p>
+
+      <button class="btn">Add to Cart</button>
+    </div>
+    </div>
+
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  
+</body>
+
+</html>
